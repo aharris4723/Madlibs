@@ -3,7 +3,7 @@
 	padding:0px;
 }
 body{
-	background-color:purple;
+	background-color:red;
 }
 h1{
 	font-family: 'Luckiest Guy', cursive;
@@ -61,4 +61,12 @@ ul{
 
 .navbar_item:hover{
    background-color: red;
+}
+#main-wrapper{
+	border-top:5px solid black;
+	border-bottom:5px solid black;
+    height:700px;
+    width:100%;
+    background-color:yellow;
+    margin-top:2vmax;
 }
