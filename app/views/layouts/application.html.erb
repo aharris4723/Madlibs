@@ -6,12 +6,28 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet"> 
   </head>
 
   <body>
 
 
-<h1>layout</h1>
+<h1>Mad Libs</h1>
+<nav>
+     <ul class="navbar">
+      
+       <li class="navbar_item"><a href="#instructions">Info</a></li>
+       <li class="navbar_item"><a href="#comments-section">Comments</a></li>
+       <li class="navbar_item"><a href="users/">High scores</a></li>
+       <% if !user_signed_in? %>
+       <li class="navbar_item"><%= link_to "Log In", '/'%></li>
+       <% end %>
+       <% if user_signed_in? %>
+       <li class="navbar_item"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+       <li class="navbar_item"><%= link_to "Settings",  edit_user_registration_path %></li>
+       <% end %>
+     </ul>
+   </nav>
 
 
 
